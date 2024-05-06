@@ -9,7 +9,8 @@ covers the full spectrum of Rust, from basic syntax to advanced topics like
 generics and error handling.
 
 > The latest version of the course can be found at
-> <https://google.github.io/comprehensive-rust/>. If you are reading somewhere
+> <https://google.github.io/comprehensive-rust/> and <https://github.com/daniel-zayas/comprehensive-rust>. 
+> If you are reading somewhere
 > else, please check there for updates.
 >
 > The course is also available [as a PDF](comprehensive-rust.pdf).
