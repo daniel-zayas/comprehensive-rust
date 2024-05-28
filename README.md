@@ -97,6 +97,4 @@ where `xx` is the ISO 639 language code (e.g. `da` for the Danish translation).
 ## Contact
 
 For questions or comments, please contact
-[Martin Geisler](mailto:mgeisler@google.com) or start a
-[discussion on GitHub](https://github.com/google/comprehensive-rust/discussions).
-We would love to hear from you.
+[Daniel Zayas](mailto:daniel.zayas@tttech-auto.com) 
