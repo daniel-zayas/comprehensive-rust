@@ -23,86 +23,98 @@ enum Event {
     /// A button was pressed.
     ButtonPressed(Button),
 
-    /// The car has arrived at the given floor.
-    CarArrived(Floor),
+    /// Driver pushes the break pedal.
+    BreakPedalPushed(Percentage),
 
     /// The car's doors have opened.
-    CarDoorOpened,
+    CarDoorOpened(Door),
 
     /// The car's doors have closed.
-    CarDoorClosed,
+    CarDoorClosed(Door),
+
+    /// Car completely stopped
+    CarStopped
 }
 
-/// A floor is represented as an integer.
-type Floor = i32;
+// ANCHOR: Percentage
+/// The push of the break pedal is represented by a floating-point percentage.
+type Percentage = f32;
+// ANCHOR_END: Percentage
 
-// ANCHOR: direction
-/// A direction of travel.
+
+// ANCHOR: Button
 #[derive(Debug)]
-enum Direction {
-    Up,
-    Down,
-}
-// ANCHOR_END: direction
-
 /// A user-accessible button.
-#[derive(Debug)]
 enum Button {
-    /// A button in the elevator lobby on the given floor.
-    LobbyCall(Direction, Floor),
-
-    /// A floor button within the car.
-    CarFloor(Floor),
+    VolumenUp,
+    VolumenDown
 }
+// ANCHOR_END: Button
 
-// ANCHOR: car_arrived
-/// The car has arrived on the given floor.
-fn car_arrived(floor: i32) -> Event {
-    // ANCHOR_END: car_arrived
-    Event::CarArrived(floor)
+// ANCHOR: Door
+#[derive(Debug)]
+/// Door of the car.
+enum Door {
+    FrontLeft,
+    FrontRight,
+    BackLeft,
+    BackRight
 }
+// ANCHOR_END: Door
 
 // ANCHOR: car_door_opened
 /// The car doors have opened.
-fn car_door_opened() -> Event {
+fn car_door_opened(door: Door) -> Event {
     // ANCHOR_END: car_door_opened
-    Event::CarDoorOpened
+    Event::CarDoorOpened(door)
 }
 
 // ANCHOR: car_door_closed
 /// The car doors have closed.
-fn car_door_closed() -> Event {
+fn car_door_closed(door: Door) -> Event {
     // ANCHOR_END: car_door_closed
-    Event::CarDoorClosed
+    Event::CarDoorClosed(door)
 }
 
-// ANCHOR: lobby_call_button_pressed
-/// A directional button was pressed in an elevator lobby on the given floor.
-fn lobby_call_button_pressed(floor: i32, dir: Direction) -> Event {
-    // ANCHOR_END: lobby_call_button_pressed
-    Event::ButtonPressed(Button::LobbyCall(dir, floor))
+// ANCHOR: car_stopped
+/// The car doors have stopped.
+fn car_stopped() -> Event {
+    // ANCHOR_END: car_stopped
+    Event::CarStopped
 }
 
-// ANCHOR: car_floor_button_pressed
-/// A floor button was pressed in the elevator car.
-fn car_floor_button_pressed(floor: i32) -> Event {
-    // ANCHOR_END: car_floor_button_pressed
-    Event::ButtonPressed(Button::CarFloor(floor))
+// ANCHOR: passenger_button_volumeup
+/// A passenger has pressed the volume up button.
+fn passenger_button_volumeup() -> Event {
+    // ANCHOR_END: passenger_button_volumeup
+    Event::ButtonPressed(Button::VolumenUp)
+}
+
+// ANCHOR: break_pedal_pressed
+/// The driver has pressed the break pedal.
+fn break_pedal_pressed(amount: Percentage) -> Event {
+    // ANCHOR_END: break_pedal_pressed
+    Event::BreakPedalPushed(amount)
 }
 
 // ANCHOR: main
 fn main() {
     println!(
-        "A ground floor passenger has pressed the up button: {:?}",
-        lobby_call_button_pressed(0, Direction::Up)
+        "Passenger pressed a button: {:?}",
+        passenger_button_volumeup()
     );
-    println!("The car has arrived on the ground floor: {:?}", car_arrived(0));
-    println!("The car door opened: {:?}", car_door_opened());
+
     println!(
-        "A passenger has pressed the 3rd floor button: {:?}",
-        car_floor_button_pressed(3)
+        "Driver breaks: {:?}",
+        break_pedal_pressed(0.79)
     );
-    println!("The car door closed: {:?}", car_door_closed());
-    println!("The car has arrived on the 3rd floor: {:?}", car_arrived(3));
+
+    println!("The car has stopped: {:?}", car_stopped());
+    
+    println!(
+        "Door opened: {:?}",
+        car_door_opened(Door::FrontLeft)
+    );
+    println!("The car door closed: {:?}", car_door_closed(Door::FrontLeft));
 }
 // ANCHOR_END: main
