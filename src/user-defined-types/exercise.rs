@@ -33,7 +33,7 @@ enum Event {
     CarDoorClosed(Door),
 
     /// Car completely stopped
-    CarStopped
+    CarStopped,
 }
 
 // ANCHOR: Percentage
@@ -41,13 +41,12 @@ enum Event {
 type Percentage = f32;
 // ANCHOR_END: Percentage
 
-
 // ANCHOR: Button
 #[derive(Debug)]
 /// A user-accessible button.
 enum Button {
     VolumenUp,
-    VolumenDown
+    VolumenDown,
 }
 // ANCHOR_END: Button
 
@@ -58,7 +57,7 @@ enum Door {
     FrontLeft,
     FrontRight,
     BackLeft,
-    BackRight
+    BackRight,
 }
 // ANCHOR_END: Door
 
@@ -99,22 +98,13 @@ fn break_pedal_pressed(amount: Percentage) -> Event {
 
 // ANCHOR: main
 fn main() {
-    println!(
-        "Passenger pressed a button: {:?}",
-        passenger_button_volumeup()
-    );
+    println!("Passenger pressed a button: {:?}", passenger_button_volumeup());
 
-    println!(
-        "Driver breaks: {:?}",
-        break_pedal_pressed(0.79)
-    );
+    println!("Driver breaks: {:?}", break_pedal_pressed(0.79));
 
     println!("The car has stopped: {:?}", car_stopped());
-    
-    println!(
-        "Door opened: {:?}",
-        car_door_opened(Door::FrontLeft)
-    );
+
+    println!("Door opened: {:?}", car_door_opened(Door::FrontLeft));
     println!("The car door closed: {:?}", car_door_closed(Door::FrontLeft));
 }
 // ANCHOR_END: main
