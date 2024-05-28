@@ -66,7 +66,7 @@
   - [Static](user-defined-types/static.md)
   - [Const](user-defined-types/const.md)
   - [Type Aliases](user-defined-types/aliases.md)
-  - [Exercise: Elevator Events](user-defined-types/exercise.md)
+  - [Exercise: ECU events](user-defined-types/exercise.md)
     - [Solution](user-defined-types/solution.md)
 
 ---

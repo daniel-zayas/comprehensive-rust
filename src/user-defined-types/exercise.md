@@ -2,9 +2,9 @@
 minutes: 15
 ---
 
-# Exercise: Elevator Events
+# Exercise: Car Events
 
-We will create a data structure to represent an event in an elevator control
+We will create a data structure to represent an event in an car Electronic Unit Control (ECU)
 system. It is up to you to define the types and functions to construct various
 events. Use `#[derive(Debug)]` to allow the types to be formatted with `{:?}`.
 
@@ -17,11 +17,15 @@ out of these structures.
     // TODO: add required variants
 }
 
-{{#include exercise.rs:direction}}
 
-{{#include exercise.rs:car_arrived}}
-    todo!()
-}
+
+{{#include exercise.rs:Percentage}}
+
+{{#include exercise.rs:Button}}
+
+{{#include exercise.rs:Door}}
+
+
 
 {{#include exercise.rs:car_door_opened}}
     todo!()
@@ -31,11 +35,15 @@ out of these structures.
     todo!()
 }
 
-{{#include exercise.rs:lobby_call_button_pressed}}
+{{#include exercise.rs:car_stopped}}
     todo!()
 }
 
-{{#include exercise.rs:car_floor_button_pressed}}
+{{#include exercise.rs:passenger_button_volumeup}}
+    todo!()
+}
+
+{{#include exercise.rs:break_pedal_pressed}}
     todo!()
 }
 
