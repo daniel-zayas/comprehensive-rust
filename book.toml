@@ -1,9 +1,9 @@
 [book]
-authors = ["Martin Geisler"]
+authors = ["Martin Geisler", "Daniel Zayas"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Comprehensive Rust 🦀"
+title = "Comprehensive Rust 🦀 (TTTech version)"
 
 [rust]
 edition = "2021"
@@ -24,7 +24,7 @@ verbose = false # Report timing information.
 
 [output.pandoc]
 optional = true
-hosted-html = "https://google.github.io/comprehensive-rust/"
+hosted-html = "https://daniel-zayas.github.io/comprehensive-rust/"
 
 [output.pandoc.profile.pdf]
 output-file = "comprehensive-rust.pdf"
@@ -57,8 +57,8 @@ additional-css = [
   "theme/css/rtl.css",
 ]
 site-url = "/comprehensive-rust/"
-git-repository-url = "https://github.com/google/comprehensive-rust"
-edit-url-template = "https://github.com/google/comprehensive-rust/edit/main/{path}"
+git-repository-url = "https://github.com/daniel-zayas/comprehensive-rust/"
+edit-url-template = "https://github.com/daniel-zayas/comprehensive-rust/edit/main/{path}"
 
 [output.html.fold]
 enable = true

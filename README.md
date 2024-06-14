@@ -1,11 +1,11 @@
-# Comprehensive Rust 🦀
+# Comprehensive Rust 🦀 (TTTech version)
 
 [![Build workflow](https://img.shields.io/github/actions/workflow/status/google/comprehensive-rust/build.yml?style=flat-square)](https://github.com/google/comprehensive-rust/actions/workflows/build.yml?query=branch%3Amain)
 [![GitHub contributors](https://img.shields.io/github/contributors/google/comprehensive-rust?style=flat-square)](https://github.com/google/comprehensive-rust/graphs/contributors)
 [![GitHub stars](https://img.shields.io/github/stars/google/comprehensive-rust?style=flat-square)](https://github.com/google/comprehensive-rust/stargazers)
 
-This repository has the source code for Comprehensive Rust 🦀, a multi-day Rust
-course developed by the Android team. The course covers all aspects of Rust,
+This repository has the source code for Comprehensive Rust 🦀 (TTTech version), a multi-day Rust
+course developed by the Android team and modified by TTTech Auto. The course covers all aspects of Rust,
 from basic syntax to generics and error handling. It also includes deep dives on
 [Android], [Chromium], [bare-metal], and [concurrency].
 
@@ -14,12 +14,12 @@ from basic syntax to generics and error handling. It also includes deep dives on
 [bare-metal]: https://google.github.io/comprehensive-rust/bare-metal.html
 [concurrency]: https://google.github.io/comprehensive-rust/concurrency.html
 
-Read the course at **https://google.github.io/comprehensive-rust/**.
+Read the course at **https://daniel-zayas.github.io/comprehensive-rust/**.
 
 ## Course Format and Target Audience
 
-The course is used internally at Google when teaching Rust to experienced
-software engineers. They typically have a background in C++ or Java.
+The course is used internally at TTTech Auto when teaching Rust to experienced
+software engineers. They typically have a background in C, C++ or Java.
 
 The course is taught in a classroom setting and we hope it will be useful for
 others who want to teach Rust to their team. The course will be less useful for
