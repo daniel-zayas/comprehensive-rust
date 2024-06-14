@@ -24,3 +24,14 @@ of wrappers might be useful in a logging utility?
 
 {{#include exercise.rs:main}}
 ```
+
+
+## Additional exercices collective-rustlings
+
+Do the following exercises in [`collective-rustlings`](https://codeberg.org/mo8it/collective-rustlings):
+
+- `traits1`
+- `traits2`
+- `traits3`
+- `traits4`
+- `traits5`

@@ -49,3 +49,15 @@ out of these structures.
 
 {{#include exercise.rs:main}}
 ```
+
+
+## Additional exercices collective-rustlings
+
+Do the following exercises in [`collective-rustlings`](https://codeberg.org/mo8it/collective-rustlings):
+
+- `structs1`
+- `structs2`
+- `structs3`
+- `enums1`
+- `enums2`
+- `enums3`

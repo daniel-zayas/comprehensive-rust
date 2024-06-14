@@ -19,3 +19,11 @@ characters, to ensure the result is still valid UTF-8.
 
 What happens if you chain two `RotDecoder` instances together, each rotating by
 13 characters?
+
+
+## Additional exercices collective-rustlings
+
+Do the following exercises in [`collective-rustlings`](https://codeberg.org/mo8it/collective-rustlings):
+
+- `generics1`
+- `generics2`

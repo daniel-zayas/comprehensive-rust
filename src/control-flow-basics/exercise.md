@@ -34,3 +34,14 @@ initial `n`.
   todo!("Implement this")
 }
 ```
+
+## Additional exercices collective-rustlings
+
+Do the following exercises in [`collective-rustlings`](https://codeberg.org/mo8it/collective-rustlings):
+
+- `functions1`
+- `functions2`
+- `functions3`
+- `if1`
+- `if2`
+- `if3`
