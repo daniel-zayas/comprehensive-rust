@@ -51,9 +51,9 @@ out of these structures.
 ```
 
 
-## Additional exercices collective-rustlings
+## Additional exercices Rustlings
 
-Do the following exercises in [`collective-rustlings`](https://codeberg.org/mo8it/collective-rustlings):
+Do the following exercises in [`rustlings`](https://github.com/rust-lang/rustlings)::
 
 - `structs1`
 - `structs2`
